@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 import za.ac.cput.domain.grade;
 import za.ac.cput.service.IGradeService;
-
 import javax.validation.Valid;
 import java.util.List;
 import java.util.Optional;
@@ -47,7 +46,7 @@ public class gradeController {
         }
     }
 
-    @GetMapping("readGrade/")
+    @GetMapping("readGrade/{gradeID}")
     public ResponseEntity<Optional<grade>> read(@PathVariable String gradeID){
         log.info("Read request: {}",gradeID);
 
