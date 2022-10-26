@@ -74,6 +74,13 @@ public class securityConfig extends WebSecurityConfigurerAdapter
                 .antMatchers(HttpMethod.DELETE, "/Student_Management-ADP3-Group14/grade/deleteGrade/").hasRole("ADMIN")
                 .antMatchers(HttpMethod.GET, "/Student_Management-ADP3-Group14/grade/readAllGrade").hasRole("USER")
 
+                //Resource Authentication
+                .antMatchers(HttpMethod.POST, "/Student_Management-ADP3-Group14/grade/save_resource").hasRole("ADMIN")
+                .antMatchers(HttpMethod.PUT, "/Student_Management-ADP3-Group14/grade/update_resource").hasRole("ADMIN")
+                .antMatchers(HttpMethod.GET, "/Student_Management-ADP3-Group14/grade/readResource/").hasRole("USER")
+                .antMatchers(HttpMethod.DELETE, "/Student_Management-ADP3-Group14/grade/deleteResource/").hasRole("ADMIN")
+                .antMatchers(HttpMethod.GET, "/Student_Management-ADP3-Group14/grade/readAllResource").hasRole("USER")
+
 
                 //Login_Authentication
 
